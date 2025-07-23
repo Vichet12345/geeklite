@@ -2,10 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Test Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GeekLite - Modern Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 style="color: red;">Hello, this is a test!</h1>
+  <header>
+    <div class="container">
+      <div class="logo">GeekLite</div>
+
+      <nav id="navbar">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="tutorials.html" class="nav-link">Tutorials</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <button id="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Learn. Build. Grow.</h1>
+      <p>Your gateway to coding mastery — tutorials, projects, and more.</p>
+      <a href="tutorials.html" class="btn-primary">Get Started</a>
+    </section>
+
+    <section class="features">
+      <h2>What We Offer</h2>
+      <div class="feature-cards">
+        <article class="card">
+          <h3>Beginner-Friendly</h3>
+          <p>Step-by-step guides perfect for new coders.</p>
+        </article>
+        <article class="card">
+          <h3>Algorithms & Data Structures</h3>
+          <p>Deep dive into essential CS concepts.</p>
+        </article>
+        <article class="card">
+          <h3>Web Development</h3>
+          <p>Modern HTML, CSS, and JavaScript tutorials.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="recent-tutorials">
+      <h2>Latest Tutorials</h2>
+      <ul>
+        <li><a href="#">Mastering Python Loops</a></li>
+        <li><a href="#">Responsive Layout with Flexbox</a></li>
+        <li><a href="#">JavaScript ES6 Essentials</a></li>
+      </ul>
+      <a href="tutorials.html" class="btn-secondary">See All Tutorials</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 GeekLite • Built with ❤️ by VICHET SUONG</p>
+  </footer>
+
+  <script>
+    // Toggle nav menu on small screens
+    const navToggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('navbar');
+
+    navToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
