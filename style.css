@@ -1,69 +1,216 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and general fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2e8b57; /* sea green */
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Site title */
+header h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Navigation menu */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 18px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #a9d5ab;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
 /* Hero section */
 .hero {
   text-align: center;
-  padding: 50px 20px;
-  background: #e6ffe6;
-  border-bottom: 1px solid #ccc;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 .hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #2e8b57;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   max-width: 600px;
-  margin: 0 auto 20px;
+  margin: 0 auto 25px;
+  color: #555;
+}
+
+/* Call to action button */
+.cta-button {
+  display: inline-block;
+  background-color: #2e8b57;
+  color: white;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(46,139,87,0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #276c46;
+  box-shadow: 0 6px 14px rgba(39,108,70,0.6);
 }
 
 /* Features section */
 .features {
-  padding: 40px 20px;
-  background: #fff;
+  margin-top: 50px;
 }
 
 .features h3 {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  color: #2e8b57;
 }
 
+/* Features grid */
 .feature-grid {
   display: flex;
-  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .feature-box {
-  background: #f0fff0;
-  padding: 20px;
-  border-left: 5px solid #006400;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #e6f4ea;
+  padding: 25px 20px;
+  border-left: 7px solid #2e8b57;
+  border-radius: 8px;
+  width: 270px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover,
+.feature-box:focus-within {
+  transform: translateY(-6px);
+}
+
+.feature-box h4 {
+  margin-bottom: 12px;
+  color: #205032;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.feature-box p {
+  color: #3c3c3c;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 /* Recent tutorials */
 .recent-tutorials {
-  padding: 40px 20px;
-  background: #f9f9f9;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.recent-tutorials h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2e8b57;
 }
 
 .recent-tutorials ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+  margin-bottom: 25px;
 }
 
 .recent-tutorials li {
-  margin: 10px 0;
+  margin: 12px 0;
+  font-size: 1.1rem;
 }
 
 .recent-tutorials a {
-  color: #006400;
+  color: #276c46;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.recent-tutorials a:hover {
+.recent-tutorials a:hover,
+.recent-tutorials a:focus {
   text-decoration: underline;
+  color: #2e8b57;
+}
+
+/* Footer */
+footer {
+  background-color: #d3e4cd;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 60px;
+  font-weight: 600;
+  color: #205032;
+  border-top: 1px solid #c2d1b8;
+  font-size: 0.9rem;
+}
+
+/* Responsive for small devices */
+@media (max-width: 600px) {
+  main {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 90%;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px 12px;
+  }
 }
