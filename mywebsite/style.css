@@ -1,0 +1,69 @@
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #e6ffe6;
+  border-bottom: 1px solid #ccc;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+/* Features section */
+.features {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.features h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-box {
+  background: #f0fff0;
+  padding: 20px;
+  border-left: 5px solid #006400;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Recent tutorials */
+.recent-tutorials {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.recent-tutorials ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.recent-tutorials li {
+  margin: 10px 0;
+}
+
+.recent-tutorials a {
+  color: #006400;
+  text-decoration: none;
+}
+
+.recent-tutorials a:hover {
+  text-decoration: underline;
+}
